@@ -29,11 +29,7 @@ namespace prac20
         Заказы _заказы;
         private void btnAddEdit_Click(object sender, RoutedEventArgs e)
         {
-            StringBuilder errors = new StringBuilder();
-            if (tbNZ.Text == null)
-            {
-                errors.Append("Напишите номер заказа");
-            }
+            StringBuilder errors = new StringBuilder();           
             if (tbMark == null)
             {
                 errors.Append("Напишите марку авто");

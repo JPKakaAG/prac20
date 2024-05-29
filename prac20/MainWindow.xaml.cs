@@ -192,11 +192,12 @@ namespace prac20
                         .OrderByDescending(z => z.КодРаботыNavigation.СтоимостьРаботы)
                         .Select(z => new
                         {
-                            Клиент = z.КлиентNavigation,
-                            Номер_заказа = z.НомерЗаказа,
-                            Стоимость = z.КодРаботыNavigation.СтоимостьРаботы
-                        });                       
-                    dg2.ItemsSource = queryForTask5.ToList();
+                                Клиент = z.Клиент,
+                                Номер_заказа = z.НомерЗаказа,
+                                Стоимость = z.КодРаботыNavigation.СтоимостьРаботы
+                        }).FirstOrDefault();
+
+                    dg2.ItemsSource = new List<object> { queryForTask5 };
                 }
                 else
                 {
@@ -226,7 +227,7 @@ namespace prac20
                 rd1.IsChecked = false;
                 rd2.IsChecked = false;
                 gbox2.IsEnabled = true;
-                gbPashalko.Visibility = Visibility.Hidden;
+                gbPashalko.Visibility = Visibility.Visible;
                 Switch = true;
             }
             else if (Switch == true)
@@ -238,7 +239,7 @@ namespace prac20
                 rd6.IsChecked = false;
                 rd7.IsChecked = false;
                 gbox2.IsEnabled = false;
-                gbPashalko.Visibility = Visibility.Visible;
+                gbPashalko.Visibility = Visibility.Hidden;
                 Switch = false  ;
             }
         }

@@ -7,19 +7,17 @@
         mc:Ignorable="d"
         Height="450" Width="472" Loaded="Window_Loaded">
     <Grid>
-        <Label Content="Номер заказа" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbClient" SelectedItem="{Binding Path=КлиентNavigation}" HorizontalAlignment="Center" Margin="0,154,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Клиент" HorizontalAlignment="Center" Margin="0,128,0,0" VerticalAlignment="Top"/>
-        <Label Content="Марка авто" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.512,0.579"/>
-        <TextBox x:Name="tbMark" Text="{Binding Path=Цена}" HorizontalAlignment="Center" Margin="0,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="cbWork" SelectedItem="{Binding Path=КодРаботыNavigation}" HorizontalAlignment="Center" Margin="0,266,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Услуга" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top"/>
-        <Label Content="Исполнитель" HorizontalAlignment="Center" Margin="0,291,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbClient" SelectedItem="{Binding Path=КлиентNavigation}" HorizontalAlignment="Center" Margin="0,108,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Клиент" HorizontalAlignment="Center" Margin="0,82,0,0" VerticalAlignment="Top"/>
+        <Label Content="Марка авто" HorizontalAlignment="Center" Margin="0,134,0,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.512,0.579"/>
+        <TextBox x:Name="tbMark" Text="{Binding Path=Цена}" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="0,164,0,0"/>
+        <ComboBox x:Name="cbWork" SelectedItem="{Binding Path=КодРаботыNavigation}" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Услуга" HorizontalAlignment="Center" Margin="0,194,0,0" VerticalAlignment="Top"/>
+        <Label Content="Исполнитель" HorizontalAlignment="Center" Margin="0,245,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnAddEdit" Click="btnAddEdit_Click" Content="Добавить" HorizontalAlignment="Left" Margin="131,350,0,0" VerticalAlignment="Top" Height="41" Width="88"/>
         <Button x:Name="btnCancel" Click="btnCancel_Click" Content="Отмена" HorizontalAlignment="Left" Margin="270,350,0,0" VerticalAlignment="Top" Height="41" Width="89"/>
         <Label Content="Дата" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top"/>
         <DatePicker x:Name="dpDate" SelectedDate="{Binding Path= Дата}" HorizontalAlignment="Center" Margin="0,41,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbNZ" HorizontalAlignment="Center" Margin="0,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="cbWorker" SelectedItem="{Binding Path= КодИсполнителяNavigation}" HorizontalAlignment="Center" Margin="0,317,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbWorker" SelectedItem="{Binding Path= КодИсполнителяNavigation}" HorizontalAlignment="Center" Margin="0,271,0,0" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
